@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CodeSpace - منصة عصرية لتعلم البرمجة">
+<title>CodeSpace | منصة تعلم البرمجة</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#home">Code<span>Space</span> 💻</a>
+  <nav class="links" aria-label="التنقل">
+    <a href="#home">الرئيسية</a><a href="#courses">الكورسات</a><a href="#lessons">المحاضرات</a><a href="#dashboard">لوحتي</a><a href="#about">عن المنصة</a>
+  </nav>
+  <div class="nav-actions"><button class="btn ghost" id="logoutBtn" hidden>تسجيل الخروج</button><button class="btn" id="loginBtn">تسجيل الدخول</button></div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div>
+    <div class="eyebrow">منصتك لتعلّم البرمجة بشكل عملي</div>
+    <h1>ابنِ مهاراتك.<br><span>واكتب كودك بثقة.</span></h1>
+    <p>منصة تعليمية عصرية تجمع الدروس، التمارين، متابعة التقدم والمشاريع في مكان واحد.</p>
+    <div class="actions"><a class="btn" href="#courses">ابدأ التعلم الآن</a><button class="btn ghost" id="signupBtn">إنشاء حساب</button></div>
+  </div>
+  <div class="heroCard"><div class="code"><span class="dot"></span><span class="dot"></span><span class="dot"></span><br><span class="purple">const</span> student = <span class="cyan">"مطور المستقبل"</span>;<br><span class="purple">function</span> <span class="blue">learn</span>() {<br>&nbsp;&nbsp;return <span class="green">"Code + Practice + Build"</span>;<br>}</div><p class="muted">مسار تعليمي منظم + تطبيق عملي + متابعة إنجازك.</p></div>
+</section>
+<section class="section"><div class="stats"><div class="stat"><span class="muted">الكورسات</span><br><b>12+</b></div><div class="stat"><span class="muted">المحاضرات</span><br><b>80+</b></div><div class="stat"><span class="muted">مشاريع تطبيقية</span><br><b>25</b></div></div></section>
+
+<section class="section" id="courses">
+  <div class="sectionTitle"><div><h2>ابدأ مسارك البرمجي</h2><span class="muted">اختر المجال المناسب لك</span></div></div>
+  <div class="grid">
+    <article class="course"><div class="icon">🌐</div><h3>تطوير الويب</h3><p>HTML وCSS وJavaScript لبناء مواقع احترافية من الصفر.</p><div class="progress"><i style="width:35%"></i></div><button class="btn courseBtn" data-course="تطوير الويب">ابدأ المسار</button></article>
+    <article class="course"><div class="icon">🐍</div><h3>Python</h3><p>تعلم أساسيات بايثون والمنطق البرمجي وبناء المشاريع.</p><div class="progress"><i style="width:18%"></i></div><button class="btn courseBtn" data-course="Python">ابدأ المسار</button></article>
+    <article class="course"><div class="icon">⚛️</div><h3>JavaScript المتقدم</h3><p>DOM وAPIs وواجهات تفاعلية ومفاهيم حديثة في JavaScript.</p><div class="progress"><i style="width:8%"></i></div><button class="btn courseBtn" data-course="JavaScript المتقدم">ابدأ المسار</button></article>
+  </div>
+</section>
+
+<section class="section" id="lessons">
+  <div class="sectionTitle"><div><h2>المحاضرة الأولى</h2><span class="muted">أول خطوة في رحلتك</span></div><span class="badge">متاحة الآن</span></div>
+  <article class="lesson">
+    <img src="lecture-01.jpg" alt="صورة المحاضرة الأولى">
+    <div><h3>المحاضرة 01 — مقدمة في البرمجة</h3><p class="muted">تعرف على عالم البرمجة، طريقة التفكير كمبرمج، وكيف تبدأ أول مشروع لك.</p><span class="muted">⏱ 25 دقيقة &nbsp; • &nbsp; المستوى: مبتدئ</span></div>
+    <button class="btn" id="lessonBtn">ابدأ المحاضرة</button>
+  </article>
+</section>
+
+<section class="section" id="dashboard">
+  <div class="dashboard"><div><span class="eyebrow">لوحة الطالب</span><h2 id="welcome">أهلاً بك في CodeSpace 👋</h2><p class="muted">سجّل الدخول لمتابعة تقدمك.</p></div><div class="dashStats"><div><b id="progressValue">0%</b><span>التقدم</span></div><div><b id="completedValue">0</b><span>محاضرات مكتملة</span></div></div></div>
+</section>
+
+<section class="section" id="about"><div class="cta"><h2>تواصل معي لإتمام منصتك</h2><p class="muted">أضف بيانات التواصل الخاصة بك هنا بدل البريد التجريبي.</p><a class="contact" href="mailto:contact@example.com">تواصل معي</a></div></section>
+</main>
+
+<footer class="footer">© 2026 CodeSpace — منصة تعلم البرمجة</footer>
+
+<div class="modal" id="authModal" aria-hidden="true"><div class="modalBox"><button class="close" id="closeModal">×</button><div class="tabs"><button class="tab active" data-mode="login">تسجيل الدخول</button><button class="tab" data-mode="signup">إنشاء حساب</button></div><h2 id="authTitle">تسجيل الدخول</h2><p class="muted">حساب تجريبي محفوظ على جهازك فقط.</p><input class="input" id="nameInput" placeholder="الاسم" hidden><input class="input" id="emailInput" placeholder="البريد الإلكتروني" type="email"><input class="input" id="passwordInput" placeholder="كلمة المرور" type="password"><button class="btn full" id="authSubmit">دخول إلى المنصة</button><p class="formNote" id="authNote"></p></div></div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
